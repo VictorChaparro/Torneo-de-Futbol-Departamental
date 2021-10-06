@@ -10,6 +10,5 @@ namespace TorFutDep.App.Persistencia
         Partido UpdatePartido(Partido partido);
         void DeletePartido(int idPartido);
         Partido GetPartido(int idPartido);
-        
     }
 }
