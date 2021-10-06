@@ -1,0 +1,12 @@
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Dominio\obj\Debug\net5.0\TorFutDep.App.Dominio.csproj.AssemblyReference.cache
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Dominio\obj\Debug\net5.0\TorFutDep.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Dominio\obj\Debug\net5.0\TorFutDep.App.Dominio.AssemblyInfoInputs.cache
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Dominio\obj\Debug\net5.0\TorFutDep.App.Dominio.AssemblyInfo.cs
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Dominio\obj\Debug\net5.0\TorFutDep.App.Dominio.csproj.CoreCompileInputs.cache
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Dominio\bin\Debug\net5.0\TorFutDep.App.Dominio.deps.json
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Dominio\bin\Debug\net5.0\TorFutDep.App.Dominio.dll
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Dominio\bin\Debug\net5.0\ref\TorFutDep.App.Dominio.dll
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Dominio\bin\Debug\net5.0\TorFutDep.App.Dominio.pdb
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Dominio\obj\Debug\net5.0\TorFutDep.App.Dominio.dll
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Dominio\obj\Debug\net5.0\ref\TorFutDep.App.Dominio.dll
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Dominio\obj\Debug\net5.0\TorFutDep.App.Dominio.pdb
