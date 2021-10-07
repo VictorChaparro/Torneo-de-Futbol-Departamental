@@ -22,7 +22,7 @@ namespace TorFutDep.App.Consola
             //AddDesempeño_Equipo();
             //AsignarArbitro();
             //AsignarEstadio();
-            AsignarEquipo();
+            //AsignarEquipo();
         }
         private static IRepositorioJugador _repojugador = new RepositorioJugador();
         private static void AddJugador()
@@ -110,6 +110,16 @@ namespace TorFutDep.App.Consola
             };
             _repopartido.AddPartido(partido);
         }
+        private static IRepositorioNovedad _reponovedad = new RepositorioNovedad();
+        private static void AddNovedad()
+        {
+            var novedad = new Novedad
+            {
+                FechaHora = new DateTime(2020, 05, 22, 2, 0, 0),
+                N_Tipo_Novedad = N_Tipo_Novedad.Gol,
+            };
+            _reponovedad.AddNovedad(novedad);
+        }
         private static void AsignarDirector_Tecnico()
         {
             var director_tecnico = _repoequipo.AsignarDirector_Tecnico(2,1);
@@ -134,6 +144,16 @@ namespace TorFutDep.App.Consola
         {
             var arbitro = _repopartido.AsignarArbitro(1,1);
             Console.WriteLine(arbitro.Nombre_Arbitro);
+        }
+        private static void AsignarJugador()
+        {
+            var jugador = _reponovedad.AsignarJugador(1,1);
+            Console.WriteLine(jugador.Nombre_Jugador);
+        }
+        private static void AsignarPartido()
+        {
+            var partido = _reponovedad.AsignarPartido(1,1);
+            Console.WriteLine("Partido Agregado");
         }
         private static void DeleteDirector_Tecnico()
         {

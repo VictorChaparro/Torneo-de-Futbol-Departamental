@@ -42,33 +42,48 @@ namespace TorFutDep.App.Persistencia
             }
             return novedadEncontrado;
         }
-        Estadio IRepositorioNovedad.AsignarEstadio(int idNovedad, int idEstadio)
+        Equipo IRepositorioNovedad.AsignarEquipo(int idNovedad, int idEquipo)
         { 
             var novedadEncontrado = _appContext.Novedades.Find(idNovedad);
             if (novedadEncontrado != null)
             {   
-            var estadioEncontrado = _appContext.Estadios.Find(idEstadio);
-            if (estadioEncontrado != null)
+            var equipoEncontrado = _appContext.Equipos.Find(idEquipo);
+            if (equipoEncontrado != null)
             { 
-                novedadEncontrado.N_Estadio = estadioEncontrado;
+                novedadEncontrado.N_Equipo= equipoEncontrado;
                 _appContext.SaveChanges();
             }
-                return estadioEncontrado;
+                return equipoEncontrado;
             }
             return null;
         }
-        Arbitro IRepositorioNovedad.AsignarArbitro(int idNovedad, int idArbitro)
+        Jugador IRepositorioNovedad.AsignarJugador(int idNovedad, int idJugador)
         { 
             var novedadEncontrado = _appContext.Novedades.Find(idNovedad);
             if (novedadEncontrado != null)
             {   
-            var arbitroEncontrado = _appContext.Arbitros.Find(idArbitro);
-            if (arbitroEncontrado != null)
+            var jugadorEncontrado = _appContext.Jugadores.Find(idJugador);
+            if (jugadorEncontrado != null)
             { 
-                novedadEncontrado.N_Arbitro = arbitroEncontrado;
+                novedadEncontrado.N_Jugador = jugadorEncontrado;
                 _appContext.SaveChanges();
             }
-                return estadioEncontrado;
+                return jugadorEncontrado;
+            }
+            return null;
+        }
+        Partido IRepositorioNovedad.AsignarPartido(int idNovedad, int idPartido)
+        { 
+            var novedadEncontrado = _appContext.Novedades.Find(idNovedad);
+            if (novedadEncontrado != null)
+            {   
+            var partidoEncontrado = _appContext.Partidos.Find(idPartido);
+            if (partidoEncontrado != null)
+            { 
+                novedadEncontrado.N_Partido = partidoEncontrado;
+                _appContext.SaveChanges();
+            }
+                return partidoEncontrado;
             }
             return null;
         }
