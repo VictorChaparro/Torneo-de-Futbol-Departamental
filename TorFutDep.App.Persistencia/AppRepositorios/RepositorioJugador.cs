@@ -6,12 +6,7 @@ namespace TorFutDep.App.Persistencia
 {
     public class RepositorioJugador : IRepositorioJugador
     {
-        private readonly AppContext _appContext;
-        /// <param name="appContext"></param>//
-        public RepositorioJugador(AppContext appContext)
-        {
-            _appContext=appContext;
-        }
+        private readonly AppContext _appContext = new AppContext();
 
         Jugador IRepositorioJugador.AddJugador(Jugador jugador)
         {

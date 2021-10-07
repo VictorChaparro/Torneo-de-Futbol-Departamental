@@ -6,12 +6,7 @@ namespace TorFutDep.App.Persistencia
 {
     public class RepositorioEstadio : IRepositorioEstadio
     {
-        private readonly AppContext _appContext;
-        /// <param name="appContext"></param>//
-        public RepositorioEstadio(AppContext appContext)
-        {
-            _appContext=appContext;
-        }
+        private readonly AppContext _appContext = new AppContext();
 
         Estadio IRepositorioEstadio.AddEstadio(Estadio estadio)
         {

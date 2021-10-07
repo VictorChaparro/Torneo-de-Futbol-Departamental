@@ -6,12 +6,7 @@ namespace TorFutDep.App.Persistencia
 {
     public class RepositorioPartido : IRepositorioPartido
     {
-        private readonly AppContext _appContext;
-        /// <param name="appContext"></param>//
-        public RepositorioPartido(AppContext appContext)
-        {
-            _appContext=appContext;
-        }
+        private readonly AppContext _appContext = new AppContext();
 
         Partido IRepositorioPartido.AddPartido(Partido partido)
         {

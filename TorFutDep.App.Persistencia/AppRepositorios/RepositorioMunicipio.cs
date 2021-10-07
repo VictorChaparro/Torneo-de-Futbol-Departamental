@@ -6,13 +6,7 @@ namespace TorFutDep.App.Persistencia
 {
     public class RepositorioMunicipio : IRepositorioMunicipio
     {
-        private readonly AppContext _appContext;
-        /// <param name="appContext"></param>//
-        public RepositorioMunicipio(AppContext appContext)
-        {
-            _appContext=appContext;
-        }
-
+        private readonly AppContext _appContext = new AppContext();
         Municipio IRepositorioMunicipio.AddMunicipio(Municipio municipio)
         {
             var municipioAdicionado= _appContext.Municipios.Add(municipio);

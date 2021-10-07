@@ -6,12 +6,7 @@ namespace TorFutDep.App.Persistencia
 {
     public class RepositorioDesempeño_Equipo : IRepositorioDesempeño_Equipo
     {
-        private readonly AppContext _appContext;
-        /// <param name="appContext"></param>//
-        public RepositorioDesempeño_Equipo(AppContext appContext)
-        {
-            _appContext=appContext;
-        }
+        private readonly AppContext _appContext = new AppContext();
 
         Desempeño_Equipo IRepositorioDesempeño_Equipo.AddDesempeño_Equipo(Desempeño_Equipo desempeño_equipo)
         {

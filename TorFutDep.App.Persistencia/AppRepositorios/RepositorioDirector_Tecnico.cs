@@ -6,12 +6,7 @@ namespace TorFutDep.App.Persistencia
 {
     public class RepositorioDirector_Tecnico : IRepositorioDirector_Tecnico
     {
-        private readonly AppContext _appContext;
-        /// <param name="appContext"></param>//
-        public RepositorioDirector_Tecnico(AppContext appContext)
-        {
-            _appContext=appContext;
-        }
+        private readonly AppContext _appContext = new AppContext();
 
         Director_Tecnico IRepositorioDirector_Tecnico.AddDirector_Tecnico(Director_Tecnico director_tecnico)
         {
