@@ -10,8 +10,8 @@ using TorFutDep.App.Persistencia;
 namespace TorFutDep.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211005142440_Inicial")]
-    partial class Inicial
+    [Migration("20211007143056_Entidades")]
+    partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -238,8 +238,8 @@ namespace TorFutDep.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaHora")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Marcador_Final")
-                        .HasColumnType("int");
+                    b.Property<string>("Marcador_Final")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Marcador_Inicial_Local")
                         .HasColumnType("int");

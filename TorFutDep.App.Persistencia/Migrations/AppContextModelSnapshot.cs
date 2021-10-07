@@ -236,8 +236,8 @@ namespace TorFutDep.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaHora")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Marcador_Final")
-                        .HasColumnType("int");
+                    b.Property<string>("Marcador_Final")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Marcador_Inicial_Local")
                         .HasColumnType("int");

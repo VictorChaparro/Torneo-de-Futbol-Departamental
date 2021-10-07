@@ -105,7 +105,7 @@ namespace TorFutDep.App.Consola
                 FechaHora = new DateTime(2020, 05, 22),
                 Marcador_Inicial_Visitante = 0,
                 Marcador_Inicial_Local = 0,
-                Marcador_Final = "3 "+" 2",
+                Marcador_Final = "EqVi 3 - EqLo2",
             };
             _repopartido.AddPartido(partido);
         }

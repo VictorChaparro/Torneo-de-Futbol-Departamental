@@ -155,7 +155,7 @@ namespace TorFutDep.App.Persistencia.Migrations
                     Marcador_Inicial_Visitante = table.Column<int>(type: "int", nullable: false),
                     Equipo_LocalId = table.Column<int>(type: "int", nullable: true),
                     Marcador_Inicial_Local = table.Column<int>(type: "int", nullable: false),
-                    Marcador_Final = table.Column<int>(type: "int", nullable: false),
+                    Marcador_Final = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     N_EstadioId = table.Column<int>(type: "int", nullable: true),
                     N_ArbitroId = table.Column<int>(type: "int", nullable: true)
                 },
