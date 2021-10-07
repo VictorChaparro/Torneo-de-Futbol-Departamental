@@ -23,7 +23,7 @@ namespace TorFutDep.App.Consola
             //AsignarEquipo();
             AddPartido();
         }
-        private static IRepositorioJugador _repojugador = new RepositorioJugador(new Persistencia.AppContext());
+        private static IRepositorioJugador _repojugador = new RepositorioJugador();
         private static void AddJugador()
         {
             var jugador = new Jugador
@@ -33,7 +33,7 @@ namespace TorFutDep.App.Consola
             };
             _repojugador.AddJugador(jugador);
         }
-        private static IRepositorioEquipo _repoequipo = new RepositorioEquipo(new Persistencia.AppContext());
+        private static IRepositorioEquipo _repoequipo = new RepositorioEquipo();
         private static void AddEquipo()
         {
             var equipo = new Equipo
@@ -42,7 +42,7 @@ namespace TorFutDep.App.Consola
             };
             _repoequipo.AddEquipo(equipo);
         }
-        private static IRepositorioMunicipio _repomunicipio = new RepositorioMunicipio(new Persistencia.AppContext());
+        private static IRepositorioMunicipio _repomunicipio = new RepositorioMunicipio();
         private static void AddMunicipio()
         {
             var municipio = new Municipio
@@ -51,7 +51,7 @@ namespace TorFutDep.App.Consola
             };
             _repomunicipio.AddMunicipio(municipio);
         }
-        private static IRepositorioDirector_Tecnico _repodirector_tecnico = new RepositorioDirector_Tecnico(new Persistencia.AppContext());
+        private static IRepositorioDirector_Tecnico _repodirector_tecnico = new RepositorioDirector_Tecnico();
         private static void AddDirector_Tecnico()
         {
             var director_tecnico = new Director_Tecnico
@@ -62,7 +62,7 @@ namespace TorFutDep.App.Consola
             };
             _repodirector_tecnico.AddDirector_Tecnico(director_tecnico);
         }
-        private static IRepositorioEstadio _repoestadio = new RepositorioEstadio(new Persistencia.AppContext());
+        private static IRepositorioEstadio _repoestadio = new RepositorioEstadio();
         private static void AddEstadio()
         {
             var estadio = new Estadio
@@ -72,7 +72,7 @@ namespace TorFutDep.App.Consola
             };
             _repoestadio.AddEstadio(estadio);
         }
-        private static IRepositorioArbitro _repoarbitro = new RepositorioArbitro(new Persistencia.AppContext());
+        private static IRepositorioArbitro _repoarbitro = new RepositorioArbitro();
         private static void AddArbitro()
         {
             var arbitro = new Arbitro
@@ -83,7 +83,7 @@ namespace TorFutDep.App.Consola
             };
             _repoarbitro.AddArbitro(arbitro);
         }
-        private static IRepositorioDesempeño_Equipo _repodesempeño_equipo = new RepositorioDesempeño_Equipo(new Persistencia.AppContext());
+        private static IRepositorioDesempeño_Equipo _repodesempeño_equipo = new RepositorioDesempeño_Equipo();
         private static void AddDesempeño_Equipo()
         {
             var desempeño_equipo = new Desempeño_Equipo
@@ -97,7 +97,7 @@ namespace TorFutDep.App.Consola
             };
             _repodesempeño_equipo.AddDesempeño_Equipo(desempeño_equipo);
         }
-        private static IRepositorioPartido _repopartido = new RepositorioPartido(new Persistencia.AppContext());
+        private static IRepositorioPartido _repopartido = new RepositorioPartido();
         private static void AddPartido()
         {
             var partido = new Partido
