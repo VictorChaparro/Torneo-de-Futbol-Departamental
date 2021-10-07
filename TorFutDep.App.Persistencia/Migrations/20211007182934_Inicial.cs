@@ -196,10 +196,9 @@ namespace TorFutDep.App.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     N_EquipoId = table.Column<int>(type: "int", nullable: true),
                     N_JugadorId = table.Column<int>(type: "int", nullable: true),
-                    N_EstadioId = table.Column<int>(type: "int", nullable: true),
+                    N_PartidoId = table.Column<int>(type: "int", nullable: true),
                     FechaHora = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    N_Tipo_Novedad = table.Column<int>(type: "int", nullable: false),
-                    PartidoId = table.Column<int>(type: "int", nullable: true)
+                    N_Tipo_Novedad = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -211,20 +210,14 @@ namespace TorFutDep.App.Persistencia.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Novedades_Estadios_N_EstadioId",
-                        column: x => x.N_EstadioId,
-                        principalTable: "Estadios",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_Novedades_Jugadores_N_JugadorId",
                         column: x => x.N_JugadorId,
                         principalTable: "Jugadores",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Novedades_Partidos_PartidoId",
-                        column: x => x.PartidoId,
+                        name: "FK_Novedades_Partidos_N_PartidoId",
+                        column: x => x.N_PartidoId,
                         principalTable: "Partidos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -261,19 +254,14 @@ namespace TorFutDep.App.Persistencia.Migrations
                 column: "N_EquipoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Novedades_N_EstadioId",
-                table: "Novedades",
-                column: "N_EstadioId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Novedades_N_JugadorId",
                 table: "Novedades",
                 column: "N_JugadorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Novedades_PartidoId",
+                name: "IX_Novedades_N_PartidoId",
                 table: "Novedades",
-                column: "PartidoId");
+                column: "N_PartidoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Partidos_Equipo_LocalId",

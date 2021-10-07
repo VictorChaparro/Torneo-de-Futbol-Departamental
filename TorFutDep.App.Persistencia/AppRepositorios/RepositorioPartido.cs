@@ -44,5 +44,35 @@ namespace TorFutDep.App.Persistencia
             }
             return partidoEncontrado;
         }
+        Estadio IRepositorioPartido.AsignarEstadio(int idPartido, int idEstadio)
+        { 
+            var partidoEncontrado = _appContext.Partidos.Find(idPartido);
+            if (partidoEncontrado != null)
+            {   
+            var estadioEncontrado = _appContext.Estadios.Find(idEstadio);
+            if (estadioEncontrado != null)
+            { 
+                partidoEncontrado.N_Estadio = estadioEncontrado;
+                _appContext.SaveChanges();
+            }
+                return estadioEncontrado;
+            }
+            return null;
+        }
+        Arbitro IRepositorioPartido.AsignarArbitro(int idPartido, int idArbitro)
+        { 
+            var partidoEncontrado = _appContext.Partidos.Find(idPartido);
+            if (partidoEncontrado != null)
+            {   
+            var arbitroEncontrado = _appContext.Arbitros.Find(idArbitro);
+            if (arbitroEncontrado != null)
+            { 
+                partidoEncontrado.N_Arbitro = arbitroEncontrado;
+                _appContext.SaveChanges();
+            }
+                return arbitroEncontrado;
+            }
+            return null;
+        }
     }
 }

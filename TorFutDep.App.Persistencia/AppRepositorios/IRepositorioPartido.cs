@@ -10,5 +10,7 @@ namespace TorFutDep.App.Persistencia
         Partido UpdatePartido(Partido partido);
         void DeletePartido(int idPartido);
         Partido GetPartido(int idPartido);
+        Estadio AsignarEstadio(int idPartido, int idEstadio);
+        Arbitro AsignarArbitro(int idPartido, int idArbitro);
     }
 }

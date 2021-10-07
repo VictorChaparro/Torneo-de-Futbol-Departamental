@@ -9,27 +9,28 @@ namespace TorFutDep.App.Consola
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            //AddEstadio();
-            //AddEstadio();
-            //AddArbitro();
             //DeleteDirector_Tecnico();
+            //AddMunicipio();
             //AddDirector_Tecnico();
             //AddEquipo();
-            //AddMunicipio();
-            //AsignarMunicipio();
             //AsignarDirector_Tecnico();
             //AddJugador();
+            //AddArbitro();
+            //AddEstadio();
+            //AsignarMunicipio();
+            //AddPartido();
             //AddDesempeño_Equipo();
-            //AsignarEquipo();
-            AddPartido();
+            //AsignarArbitro();
+            //AsignarEstadio();
+            AsignarEquipo();
         }
         private static IRepositorioJugador _repojugador = new RepositorioJugador();
         private static void AddJugador()
         {
             var jugador = new Jugador
             {
-                Nombre_Jugador = "Victor Manuel Chaparro Alvarez",
-                Tipos_Posiciones = Tipo_Posicion.Delantero,
+                Nombre_Jugador = "Oscar David Calixto Perez",
+                Tipos_Posiciones = Tipo_Posicion.Defensa,
             };
             _repojugador.AddJugador(jugador);
         }
@@ -38,7 +39,7 @@ namespace TorFutDep.App.Consola
         {
             var equipo = new Equipo
             {
-                Nombre_Equipo = "Millions",
+                Nombre_Equipo = "Barcelonians",
             };
             _repoequipo.AddEquipo(equipo);
         }
@@ -56,9 +57,9 @@ namespace TorFutDep.App.Consola
         {
             var director_tecnico = new Director_Tecnico
             {
-                Nombre_Director_Tecnico = "David Santiago Barrera Fuentes",
-                Documento = "9332523",
-                Telefono= "322323412",
+                Nombre_Director_Tecnico = "Laura Sofia Barreto Perez",
+                Documento = "9121313",
+                Telefono= "35345323",
             };
             _repodirector_tecnico.AddDirector_Tecnico(director_tecnico);
         }
@@ -67,8 +68,8 @@ namespace TorFutDep.App.Consola
         {
             var estadio = new Estadio
             {
-                Nombre_Estadio = "Idry",
-                Direccion = "Calle 22 #12-42",
+                Nombre_Estadio = "Las Atalayas",
+                Direccion = "Calle 40 #22-12",
             };
             _repoestadio.AddEstadio(estadio);
         }
@@ -77,9 +78,9 @@ namespace TorFutDep.App.Consola
         {
             var arbitro = new Arbitro
             {
-                Nombre_Arbitro = "Ana Maria Castillo Olmos",
-                Documento = "456",
-                Telefono = "333333",
+                Nombre_Arbitro = "Carlos Andres Pedraza",
+                Documento = "43425",
+                Telefono = "2313414",
             };
             _repoarbitro.AddArbitro(arbitro);
         }
@@ -88,12 +89,12 @@ namespace TorFutDep.App.Consola
         {
             var desempeño_equipo = new Desempeño_Equipo
             {
-                Cantidad_de_Partidos_Jugados = 14,
-                Cantidad_de_Partidos_Ganados = 8,
-                Cantidad_de_Partidos_Empatados = 6,
-                Goles_A_Favor = 19,
-                Goles_En_Contra = 15,
-                Puntos = 30,
+                Cantidad_de_Partidos_Jugados = 22,
+                Cantidad_de_Partidos_Ganados = 10,
+                Cantidad_de_Partidos_Empatados = 7,
+                Goles_A_Favor = 17,
+                Goles_En_Contra = 18,
+                Puntos = 37,
             };
             _repodesempeño_equipo.AddDesempeño_Equipo(desempeño_equipo);
         }
@@ -102,27 +103,37 @@ namespace TorFutDep.App.Consola
         {
             var partido = new Partido
             {
-                FechaHora = new DateTime(2020, 05, 22),
+                FechaHora = new DateTime(2020, 05, 22, 2, 0, 0),
                 Marcador_Inicial_Visitante = 0,
                 Marcador_Inicial_Local = 0,
-                Marcador_Final = "EqVi 3 - EqLo2",
+                Marcador_Final = "EqVi 3 - EqLo 2",
             };
             _repopartido.AddPartido(partido);
         }
         private static void AsignarDirector_Tecnico()
         {
-            var director_tecnico = _repoequipo.AsignarDirector_Tecnico(3,3);
+            var director_tecnico = _repoequipo.AsignarDirector_Tecnico(2,1);
             Console.WriteLine(director_tecnico.Nombre_Director_Tecnico);
         }
         private static void AsignarMunicipio()
         {
-            var municipio = _repoequipo.AsignarMunicipio(3,2);
+            var municipio = _repoestadio.AsignarMunicipio(2,1);
             Console.WriteLine(municipio.Nombre_Municipio);
         }
         private static void AsignarEquipo()
         {
-            var equipo = _repodesempeño_equipo.AsignarEquipo(2,2);
+            var equipo = _repodesempeño_equipo.AsignarEquipo(2,1);
             Console.WriteLine(equipo.Nombre_Equipo);
+        }
+        private static void AsignarEstadio()
+        {
+            var estadio = _repopartido.AsignarEstadio(1,2);
+            Console.WriteLine(estadio.Nombre_Estadio);
+        }
+        private static void AsignarArbitro()
+        {
+            var arbitro = _repopartido.AsignarArbitro(1,1);
+            Console.WriteLine(arbitro.Nombre_Arbitro);
         }
         private static void DeleteDirector_Tecnico()
         {

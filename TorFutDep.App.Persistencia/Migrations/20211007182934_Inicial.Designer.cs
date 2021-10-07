@@ -10,8 +10,8 @@ using TorFutDep.App.Persistencia;
 namespace TorFutDep.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211007143056_Entidades")]
-    partial class Entidades
+    [Migration("20211007182934_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -197,27 +197,22 @@ namespace TorFutDep.App.Persistencia.Migrations
                     b.Property<int?>("N_EquipoId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("N_EstadioId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("N_JugadorId")
                         .HasColumnType("int");
 
-                    b.Property<int>("N_Tipo_Novedad")
+                    b.Property<int?>("N_PartidoId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PartidoId")
+                    b.Property<int>("N_Tipo_Novedad")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("N_EquipoId");
 
-                    b.HasIndex("N_EstadioId");
-
                     b.HasIndex("N_JugadorId");
 
-                    b.HasIndex("PartidoId");
+                    b.HasIndex("N_PartidoId");
 
                     b.ToTable("Novedades");
                 });
@@ -314,23 +309,19 @@ namespace TorFutDep.App.Persistencia.Migrations
                         .WithMany()
                         .HasForeignKey("N_EquipoId");
 
-                    b.HasOne("TorFutDep.App.Dominio.Estadio", "N_Estadio")
-                        .WithMany()
-                        .HasForeignKey("N_EstadioId");
-
                     b.HasOne("TorFutDep.App.Dominio.Jugador", "N_Jugador")
                         .WithMany()
                         .HasForeignKey("N_JugadorId");
 
-                    b.HasOne("TorFutDep.App.Dominio.Partido", null)
+                    b.HasOne("TorFutDep.App.Dominio.Partido", "N_Partido")
                         .WithMany("Novedades")
-                        .HasForeignKey("PartidoId");
+                        .HasForeignKey("N_PartidoId");
 
                     b.Navigation("N_Equipo");
 
-                    b.Navigation("N_Estadio");
-
                     b.Navigation("N_Jugador");
+
+                    b.Navigation("N_Partido");
                 });
 
             modelBuilder.Entity("TorFutDep.App.Dominio.Partido", b =>
