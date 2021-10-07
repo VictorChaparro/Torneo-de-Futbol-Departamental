@@ -12,6 +12,6 @@ namespace TorFutDep.App.Persistencia
         Novedad GetNovedad(int idNovedad);
         Equipo AsignarEquipo(int idNovedad, int idEquipo);
         Jugador AsignarJugador(int idNovedad, int idJugador);
-        partido AsignarPartido(int idNovedad, int idPartido);
+        Partido AsignarPartido(int idNovedad, int idPartido);
     }
 }
