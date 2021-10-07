@@ -11,7 +11,6 @@ namespace TorFutDep.App.Persistencia
         void DeleteNovedad(int idNovedad);
         Novedad GetNovedad(int idNovedad);
         Estadio AsignarEstadio(int idNovedad, int idEstadio);
-        Arbitro AsignarArbitro(int idNovedad, int idArbitro);
         Equipo AsignarEquipo(int idNovedad, int idEquipo);
         Jugador AsignarJugador(int idNovedad, int idJugador);
     }
