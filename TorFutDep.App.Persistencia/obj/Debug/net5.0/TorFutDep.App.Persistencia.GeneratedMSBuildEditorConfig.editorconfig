@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = TorFutDep.App.Persistencia
-build_property.ProjectDir = c:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Persistencia\
+build_property.ProjectDir = C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Persistencia\
