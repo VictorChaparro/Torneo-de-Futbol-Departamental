@@ -2,3 +2,19 @@
 @model TorFutDep.App.Frontend.Pages.Directores_Tecnicos.DetailsModel
 @{
 }
+<h1>Detalles del Director Técnico</h1>
+<table class="table table-dark">
+    <tr>
+        <th scope="col">Nombre Completo</th>
+        <td>@Model.director_tecnico.Nombre_Director_Tecnico</td>
+    </tr>
+    <tr>
+        <th scope="col">Documento</th>
+        <td>@Model.director_tecnico.Documento</td>
+    </tr>
+    <tr>
+        <th scope="col">Telefono</th>
+        <td>@Model.director_tecnico.Telefono</td>
+    </tr>
+</table>
+<a class="btn btn-secondary" aps-page="./Index">Volver</a>
