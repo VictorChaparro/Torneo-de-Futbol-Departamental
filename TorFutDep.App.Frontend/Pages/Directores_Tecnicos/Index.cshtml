@@ -2,3 +2,29 @@
 @model TorFutDep.App.Frontend.Pages.Directores_Tecnicos.IndexModel
 @{
 }
+<h1>Listado de Directores Técnicos</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Nombre Completo</th>
+            <th scope="col">Documento</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var director_tecnico in Model.directores_tecnicos)
+        {
+            <tr>
+                <td>@director_tecnico.Nombre_Director_Tecnico</td>
+                <td>@director_tecnico.Documento</td>
+                <td>@director_tecnico.Telefono</td>
+                <td>
+                    <a class="btn btn-success" aps-page="./Details" asp-route-id="@director_tecnico.Id">
+                    Detalle
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
