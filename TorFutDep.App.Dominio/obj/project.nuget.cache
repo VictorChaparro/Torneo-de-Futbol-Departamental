@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fkl+zDaV3B57PMroKhG+dTKQPqKccrUCXgA1nh8vvcVuaDhKKFNZOBbydosLY+gJbaG8Bi+o1vVwUgZzY+mB9g==",
+  "dgSpecHash": "ycsilDi/SgG7zCy7FaonvSWK6SwfzILvp0E+DMdLSeb7ytU8ira4FnMTLyMkk9MRGcfckA9p9JJYFbk78PSzFg==",
   "success": true,
   "projectFilePath": "C:\\MisionTic2022-Ciclo3\\TFutbolDepartamental\\TorFutDep.App\\TorFutDep.App.Dominio\\TorFutDep.App.Dominio.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\SHIRLEY\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

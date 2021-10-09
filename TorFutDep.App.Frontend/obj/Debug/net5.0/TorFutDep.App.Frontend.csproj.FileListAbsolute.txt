@@ -72,3 +72,4 @@ C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Fronten
 C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Frontend\bin\Debug\net5.0\TorFutDep.App.Persistencia.dll
 C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Frontend\bin\Debug\net5.0\TorFutDep.App.Persistencia.pdb
 C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Frontend\bin\Debug\net5.0\TorFutDep.App.Dominio.pdb
+C:\MisionTic2022-Ciclo3\TFutbolDepartamental\TorFutDep.App\TorFutDep.App.Frontend\obj\Debug\net5.0\Razor\Pages\Directores_Tecnicos\Create.cshtml.g.cs
