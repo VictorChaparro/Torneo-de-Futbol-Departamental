@@ -23,8 +23,15 @@ namespace TorFutDep.App.Frontend.Pages.Directores_Tecnicos
         }
         public IActionResult OnPost(Director_Tecnico director_Tecnico)
         {
-            _repoDirector_tecnico.AddDirector_Tecnico(director_Tecnico);
-            return RedirectToPage("Index");
+            if (ModelState.IsValid)
+            {
+                _repoDirector_tecnico.AddDirector_Tecnico(director_Tecnico);
+                return RedirectToPage("Index");
+            }
+            else
+            {
+                return Page();
+            }
         }
     }
 }
