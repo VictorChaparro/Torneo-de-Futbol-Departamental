@@ -21,9 +21,8 @@
                 <td>@director_tecnico.Documento</td>
                 <td>@director_tecnico.Telefono</td>
                 <td>
-                    <a class="btn btn-success" asp-page="./Details" asp-route-id="@director_tecnico.Id">
-                    Detalle
-                    </a>
+                    <a class="btn btn-primary" asp-page="./Details" asp-route-id="@director_tecnico.Id">Detalles</a>
+                    <a class="btn btn-success" asp-page="./Edit" asp-route-id="@director_tecnico.Id">Modificar</a>
                 </td>
             </tr>
         }
