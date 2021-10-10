@@ -11,8 +11,9 @@ namespace TorFutDep.App.Frontend.Pages.Municipios
 {
     public class IndexModel : PageModel
     {
+        
         private readonly IRepositorioMunicipio _repoMunicipio;
-        public IEnumerable<Municipio> municipios { get; set; }
+        public IEnumerable<Municipio> municipios  { get; set; }
         public IndexModel(IRepositorioMunicipio repoMunicipio)
         {
             _repoMunicipio = repoMunicipio;

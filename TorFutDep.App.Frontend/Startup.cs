@@ -26,6 +26,7 @@ namespace TorFutDep.App.Frontend
         {
             services.AddRazorPages();
             services.AddSingleton<IRepositorioDirector_Tecnico, RepositorioDirector_Tecnico>();
+            services.AddSingleton<IRepositorioMunicipio, RepositorioMunicipio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
